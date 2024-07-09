@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinnacle Hospital - Departments</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='front.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            align-items: right;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        header .hospital-name {
+            font-family: 'Georgia', serif;
+            font-size: 1.5em;
+            color: #ffc107;
+            margin-left: 0.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .departments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .department {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .department h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .department p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Pinnacle Hospital Logo">
+        </div>
+        <div class="hospital-name">Pinnacle Hospital</div>
+    </header>
+
+    <main>
+        <h1>Our Departments</h1>
+        <div class="departments">
+            <div class="department">
+                <h3>Cardiology</h3>
+                <p>Our Cardiology department offers advanced heart care with a team of experienced cardiologists.</p>
+            </div>
+            <div class="department">
+                <h3>Neurology</h3>
+                <p>Expert care for neurological disorders with state-of-the-art diagnostic and treatment facilities.</p>
+            </div>
+            <div class="department">
+                <h3>Oncology</h3>
+                <p>Comprehensive cancer care with a multidisciplinary approach to treatment and support.</p>
+            </div>
+            <div class="department">
+                <h3>Orthopedics</h3>
+                <p>Advanced orthopedic treatments and surgeries for bone and joint health.</p>
+            </div>
+            <div class="department">
+                <h3>Pediatrics</h3>
+                <p>Quality healthcare for children with a focus on their overall growth and development.</p>
+            </div>
+            <div class="department">
+                <h3>Gynecology</h3>
+                <p>Comprehensive care for women's health, including maternity and reproductive health services.</p>
+            </div>
+            <div class="department">
+                <h3>Dermatology</h3>
+                <p>Specialized care for skin conditions and cosmetic dermatology treatments.</p>
+            </div>
+            <div class="department">
+                <h3>Gastroenterology</h3>
+                <p>Expert care for digestive system disorders with advanced diagnostic and treatment options.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pinnacle Hospital. All rights reserved.</p>
+    </footer>
+</body>
+</html>

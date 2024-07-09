@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+            background-image:url(hospimg.jpg);    
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            box-shadow: 0 0 10px rgba(247, 246, 246, 0);
+        }
+        .logo{
+            position: absolute;
+            right:10px;
+            width: 100px;
+            height:none ;
+        }
+        ul{
+            display:flex;
+            flex-direction:row;
+            list-style-type:none;
+            background-color: rgb(247, 243, 243);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+
+        }
+        ul li{
+            padding:25px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}"alt="Logo" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="{{url_for('appointment')}}">Create an Appointment</a></li>
+            <li><a href="{{url_for('conditional_appointments')}}">Appointments</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- <div class="welcome-message">Welcome to Hospital</div> -->
+</body>
+</html>

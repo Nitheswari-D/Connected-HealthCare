@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='doctorvalidate.js') }}"></script>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #form{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        input[type=text],[type=number],[type=email],[type=password]{
+            padding:5px;
+            margin:10px;
+            margin-left:0;
+            width:300px;
+            border-radius: 5px;
+        }
+        select{
+            margin:10px;
+            padding:5px;
+            width:315px;
+            margin-left:0;
+            border-radius: 5px;
+        }
+        #btn{
+            display:flex;
+            justify-content: center;
+            margin-top:10px;
+        }
+        button{
+            width:100px;
+            padding:10px;
+            border-radius:5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id ="form">
+        <form action="{{url_for('signupdoc')}}" method="POST" onsubmit="return validateForm()">
+            <input type="text" id="name" name="name" placeholder="Name"><br>
+            <input type="email" id="mail" name="mail" placeholder="Email"><br>
+            <input type="number" id="no" name="no" placeholder="Mobile Number"><br>
+            <input type="number" id="age"name="age" placeholder="Age"><br>
+            <label>Gender: </label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label>Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label>Female</label><br>
+            <input type="number" id="exp" name="exp" placeholder="Enter experience in years"><br>
+            <select id="designation" name="designation">
+                <option selected disabled>Designation</option>
+                <option value="MBBS">MBBS</option>
+                <option value="MD">MD</option>
+                <option value="BDS">BDS</option>
+                <option value="MDS">MDS</option>
+            </select><br>
+            <select id="specialization" name="specialization">
+                <option value="General Physican">General Physician</option>
+                <option value="ENT Specialist">ENT Specialist</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Psychiatrists">Psychiatrists</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Oncologist">Oncologist</option>
+                <option value="Neurologist">Neurologist</option>
+            </select><br>
+            <input type="password" id="pass" name="pass" placeholder="password"><br>
+            <input type="password" id="confirm pass" name="confirm_pass" placeholder="confirm password">
+            <div id="btn"><button type="submit">Submit</button></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinnacle Hospital</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='front.css') }}">
+    <style>
+        .auth-buttons a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Pinnacle Hospital Logo">
+            </div>
+            <div class="hospital-name">Pinnacle Hospital</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Our Vision</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a>
+                    <ul>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Our Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/department">Departments</a>
+                    <ul>
+                        <li><a href="#">Cardiology</a></li>
+                        <li><a href="#">Neurology</a></li>
+                        <li><a href="#">Oncology</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Updates</a>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Careers</a>
+                    <ul>
+                        <li><a href="#">Job Openings</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a>
+                    <ul>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Address</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="{{url_for('login')}}" class="button-link"><button class="login-btn">Login</button></a>
+            <a href="{{ url_for('index') }}" class="button-link"><button class="signup-btn">Sign Up</button></a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to Pinnacle Hospital</h1>
+            <p>We are a leading healthcare provider dedicated to serving our community with excellence. At Pinnacle Hospital, we offer a wide range of medical services, from primary care to specialized treatments. Our state-of-the-art facilities and experienced medical professionals ensure the best possible care for our patients.</p>
+            <button>Learn More</button>
+        </section>
+        <section>
+            <h2>Our Services</h2>
+            <p>At Pinnacle Hospital, we provide comprehensive healthcare services including:</p>
+            <ul>
+                <li>Urgent Care: Immediate medical attention for non-life-threatening conditions.</li>
+                <li>News & Events: Stay updated with the latest hospital news and upcoming events.</li>
+                <li>Find a Physician: Connect with our experienced and dedicated medical staff.</li>
+                <li>Inpatient Services: Comfortable and well-equipped inpatient facilities for various medical needs.</li>
+                <li>Outpatient Services: Efficient and convenient outpatient services for various treatments and consultations.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Why Choose Us</h2>
+            <p>Choosing Pinnacle Hospital means choosing quality care and a commitment to excellence. Here’s why you should choose us:</p>
+            <ul>
+                <li><strong>Expert Medical Team:</strong> Our team comprises highly qualified and experienced medical professionals.</li>
+                <li><strong>Advanced Facilities:</strong> We use the latest medical technology to ensure the best outcomes for our patients.</li>
+                <li><strong>Patient-Centered Care:</strong> We prioritize our patients' needs and work towards their overall well-being.</li>
+                <li><strong>Community Focused:</strong> We are dedicated to improving the health of our community through various outreach programs.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p id="footer">&copy; 2024 Pinnacle Hospital</p>
+    </footer>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

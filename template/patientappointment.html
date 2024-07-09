@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Appointments</title>
+    <style>
+        body{
+            margin:0px;
+            background-image:url(hospimg.jpg);    
+            background-size: cover;
+            height: 100vh;
+            box-shadow: 0 0 10px rgba(247, 246, 246, 0);
+        }
+        .logo{
+            position: absolute;
+            top:0px;
+            right:10px;
+            width: 100px;
+            height:none ;
+        }
+        ul{
+            display:flex;
+            flex-direction:row;
+            list-style-type:none;
+            background-color: rgb(247, 243, 243);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        }
+        ul li{
+            padding:25px;
+            position: relative;
+        }
+        .appointments{
+            border:2px solid black;
+            border-radius:5px;
+            padding:20px;
+            margin:20px;
+        }
+        .appointment{
+            border-bottom: 2px solid #ccc;
+        }
+        .appointment:last-child{
+            border-bottom:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="appointments">
+        <h2>Your Appointments</h2>
+        {% for appointment in appointments %}
+            <div class="appointment">
+                <p><strong>Provider Name:</strong> {{ appointment[1] }}</p>
+                <p><strong>Date:</strong> {{ appointment[2] }}</p>
+                <p><strong>Time:</strong> {{ appointment[3] }}</p>
+                <p><strong>Notes:</strong> {{ appointment[4] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
